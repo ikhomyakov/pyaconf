@@ -3,6 +3,19 @@
 Pyaconf is a config library that is built around python dictionary and supports dynamic python, json, yaml, and ini formats with inheritance.
 It features:
 
+## Features
+
+* 4 formats (pyaconf [python], yaml, json, ini) that can be layered on top of each other,
+* dynamic pyaconf (python) format,
+* __include__ feature that can layer combine the 4 formats hierarchically,
+* “merge” capability that allows to override values by the topmost layer,
+* jinja2 template substitution capability that can be injected at various layers of override and dictionary hierarchies, 
+* simple 3 function (load, merge, and dump) Python API, and  
+* command line utility that allows us to use all these features from the command line 
+
+
+## Notes
+
 * All configs are json compatible dicts.
 * Supports layered configs (inheritance) via `__include__` dict entry, for example, the following yaml config would read the dictionary defined from config `boo.json` and then will update it with `user` and `password` from this config:
 

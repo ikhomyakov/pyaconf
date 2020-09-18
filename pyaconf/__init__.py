@@ -3,10 +3,10 @@
 
 # Copyright (c) 2002-2019 Aware Software, inc. All rights reserved.
 # Copyright (c) 2005-2019 ikh software, inc. All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
-# 
+#
 # 1. Redistributions of source code must retain the above copyright notice,
 # this list of conditions and the following disclaimer.
 # 2. Redistributions in binary form must reproduce the above copyright notice,
@@ -15,7 +15,7 @@
 # 3. Neither the name of the copyright holder nor the names of its contributors
 # may be used to endorse or promote products derived from this software without
 # specific prior written permission.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 # AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 # IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -33,8 +33,7 @@
 #
 name = "pyaconf"
 __author__ = """Igor Khomyakov"""
-__email__ = 'ikh@ikhsoftware.com'
-__version__ = '0.7.0'
+__email__ = "ikh@ikhsoftware.com"
+__version__ = "0.7.1"
 
 from pyaconf.pyaconf import load, merge, dump
-

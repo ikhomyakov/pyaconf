@@ -1,3 +1,10 @@
+What's new in pyaconf 0.7.1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Dependencies relaxed
+* Code reformatted using "black"
+* Updated readme
+
 What's new in pyaconf 0.7.0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
