@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="pyaconf",
-    version="0.7.1",
+    version="0.7.2",
     author="ikh software, inc.",
     author_email="ikh@ikhsoftware.com",
     description=(
@@ -15,7 +15,7 @@ setuptools.setup(
     ),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://bitbucket.org/ikh/pyaconf",
+    url="https://github.com/ikhomyakov/pyaconf",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -25,5 +25,5 @@ setuptools.setup(
     python_requires=">= 3.7",
     install_requires=["pyyaml >= 5.1", "jinja2 >= 2.10"],
     scripts=["pyaconf_render"],
-    project_urls={"Bug Reports": "https://bitbucket.org/ikh/pyaconf/issues"},
+    project_urls={"Bug Reports": "https://github.com/ikhomyakov/pyaconf/issues"},
 )
