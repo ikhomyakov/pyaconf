@@ -2,27 +2,19 @@
 import sys
 import pyaconf
 import argparse
-try:
-   p = argparse.ArgumentParser()
-   p.add_argument('-if', '--input-format', nargs=1, type=str, default=['auto'], help='Input format: auto, pyaconf[.jinja2], yaml[.jinja2], json[.jinja2], ini[.jinja2]')
-   p.add_argument('-of', '--output-format', nargs=1, type=str, default=['yaml'], help='Output format: yaml or json')
-   p.add_argument('-c', '--context', nargs=1, type=str, default=[{}], help='Root level context config file (applied only to root level templates)')
-   p.add_argument('-cf', '--context-format', nargs=1, type=str, default=['auto'], help='Context format: auto, pyaconf[.jinja2], yaml[.jinja2], json[.jinja2], ini[.jinja2]')
-   p.add_argument('FILE', nargs='+', help='Config file in one of the following formats: pyaconf[.jinja2], yaml[.jinja2], json[.jinja2], ini[.jinja2]')
-   args = p.parse_args()
-   input_format = args.input_format[0]
-   output_format = args.output_format[0]
-   context_format = args.context_format[0]
-   context = args.context[0]
-   files = args.FILE
+p = argparse.ArgumentParser()
+p.add_argument('-if', '--input-format', nargs=1, type=str, default=['auto'], help='Input format: auto, pyaconf[.jinja2], yaml[.jinja2], json[.jinja2], ini[.jinja2]')
+p.add_argument('-of', '--output-format', nargs=1, type=str, default=['yaml'], help='Output format: yaml or json')
+p.add_argument('-c', '--context', nargs=1, type=str, default=[{}], help='Root level context config file (applied only to root level templates)')
+p.add_argument('-cf', '--context-format', nargs=1, type=str, default=['auto'], help='Context format: auto, pyaconf[.jinja2], yaml[.jinja2], json[.jinja2], ini[.jinja2]')
+p.add_argument('FILE', nargs='+', help='Config file in one of the following formats: pyaconf[.jinja2], yaml[.jinja2], json[.jinja2], ini[.jinja2]')
+args = p.parse_args()
+input_format = args.input_format[0]
+output_format = args.output_format[0]
+context_format = args.context_format[0]
+context = args.context[0]
+files = args.FILE
 
-   c = pyaconf.load(context, format=context_format, context={})
-   x = pyaconf.merge([pyaconf.load(src, format=input_format, context=c) for src in files])
-   pyaconf.dump(x, sys.stdout, format=output_format)
-
-except Exception as e:
-   print(f"Error: {e}", file=sys.stderr)
-   #raise e
-
-
-
+c = pyaconf.load(context, format=context_format, context={})
+x = pyaconf.merge([pyaconf.load(src, format=input_format, context=c) for src in files])
+pyaconf.dump(x, sys.stdout, format=output_format)
