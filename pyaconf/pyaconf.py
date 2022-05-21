@@ -103,7 +103,7 @@ _input_extensions = {
     ".pyaconf.jinja2": "pyaconf.jinja2",
     ".ini.jinja2": "ini.jinja2",
     ".yaml.j2": "yaml.jinja2",
-    ".yml.j2": "yml.jinja2",
+    ".yml.j2": "yaml.jinja2",
     ".json.j2": "json.jinja2",
     ".pyaconf.j2": "pyaconf.jinja2",
     ".ini.j2": "ini.jinja2",
